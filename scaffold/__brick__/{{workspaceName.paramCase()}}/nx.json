@@ -1,0 +1,152 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "cacheDirectory": ".nx/cache",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "namedInputs": {
+    "dotenvVault": [
+      { "env": "DOTENV_KEY" },
+      "{workspaceRoot}/.env.vault",
+      "{workspaceRoot}/.env.me",
+      "{workspaceRoot}/.env"
+    ],
+    "sharedPackageManagers": [
+      "{projectRoot}/package.json",
+      "{workspaceRoot}/package.json",
+      "{projectRoot}/.npmrc",
+      "{workspaceRoot}/.npmrc",
+      "{workspaceRoot}/pnpm-lock.yaml",
+      "{workspaceRoot}/pnpm-workspace.yaml",
+      {
+        "runtime": "node -v"
+      },
+      {
+        "runtime": "pnpm -v"
+      },
+      "{projectRoot}/pubspec.yaml",
+      "{projectRoot}/pubspec.yml",
+      "{projectRoot}/pubspec.lock",
+      {
+        "runtime": "dart --version"
+      },
+      {
+        "runtime": "flutter --version"
+      },
+      {
+        "runtime": "fvm --version"
+      }
+    ],
+    "sharedGlobals": [
+      "!{projectRoot}/dist",
+      "!{projectRoot}/.editorconfig",
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/.eslintignore",
+      "!{projectRoot}/**/*.md",
+      "!{workspaceRoot}/**/*.md",
+      "!{projectRoot}/node_modules/**"
+    ],
+    "default": [
+      "sharedGlobals",
+      "sharedPackageManagers"
+    ],
+    "environment": [
+      "dotenvVault"
+    ]
+  },
+  "targetDefaults": {
+    "start": {
+      "dependsOn": [
+        "default"
+      ]
+    },
+    "start:production": {
+      "dependsOn": [
+        "default",
+        "build:production"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "default",
+        "^build"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
+      "cache": true
+    },
+    "build:production": {
+      "dependsOn": [
+        "default",
+        "^build:production"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
+      "cache": true
+    },
+    "test": {
+      "dependsOn": [
+        "default",
+        "build:production"
+      ],
+      "cache": true
+    },
+    "test:headless": {
+      "dependsOn": [
+        "default",
+        "build:production"
+      ],
+      "cache": true
+    },
+    "e2e": {
+      "dependsOn": [
+        "default",
+        "start:production"
+      ],
+      "cache": true
+    },
+    "e2e:headless": {
+      "dependsOn": [
+        "default",
+        "start:production"
+      ],
+      "cache": true
+    },
+    "format": {
+      "dependsOn": [
+        "default"
+      ],
+      "cache": true
+    },
+    "format:fix": {
+      "dependsOn": [
+        "default"
+      ],
+      "cache": true
+    },
+    "lint": {
+      "dependsOn": [
+        "default"
+      ],
+      "cache": true
+    },
+    "lint:fix": {
+      "dependsOn": [
+        "default"
+      ],
+      "cache": true
+    },
+    "release": {
+      "executor": "@jscutlery/semver:version",
+      "dependsOn": ["^release"],
+      "options": {
+        "push": true,
+        "syncVersions": true,
+        "trackDeps": true,
+        "skipCommitTypes": ["docs","ci"]
+      }
+    }
+  }
+}

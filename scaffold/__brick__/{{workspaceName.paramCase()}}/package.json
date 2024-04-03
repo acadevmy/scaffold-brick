@@ -1,0 +1,66 @@
+{
+  "name": "{{workspaceName.paramCase()}}",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "dotenv-vault pull -y",
+    "configuration": "npx dotenv-vault open -y",
+    "build": "nx run-many -t build --parallel",
+    "build:production": "nx run-many -t build:production --parallel=true",
+    "start": "nx run-many -t start --parallel=true",
+    "start:production": "nx run-many -t start:production --parallel=true",
+    "format": "nx run-many -t format --parallel=true",
+    "format:fix": "nx run-many -t format:fix --parallel=true",
+    "lint": "nx run-many -t lint --parallel=true",
+    "lint:fix": "nx run-many -t lint:fix --parallel=true",
+    "test": "nx run-many -t test --parallel=true",
+    "test:headless": "nx run-many -t test:headless --parallel=true",
+    "e2e": "nx run-many -t e2e --parallel=true",
+    "e2e:headless": "nx run-many -t e2e:headless --parallel=true",
+    "version": "nx run workspace:version"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-angular": "^18.0.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/format": "^19.0.3",
+    "@jscutlery/semver": "^5.2.2",
+    "commitlint": "^19.2.1",
+    "dotenv-vault": "^1.26.0",
+    "husky": "^9.0.11",
+    "nx": "18.0.8"
+  },
+  "workspaces": [
+    "projects/*",
+    "libraries/*"
+  ],
+  "engines": {
+    "node": ">=20.11.1",
+    "pnpm": ">=8.15.0"
+  },
+  "pnpm": {
+    "requiredScripts": [
+      "build",
+      "build:production",
+      "test",
+      "lint",
+      "lint:fix",
+      "format",
+      "format:fix"
+    ],
+    "supportedArchitectures": {
+      "os": [
+        "win32",
+        "darwin",
+        "current"
+      ],
+      "cpu": [
+        "x64",
+        "arm64"
+      ]
+    }
+  }
+}
