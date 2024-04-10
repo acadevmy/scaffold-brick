@@ -26,7 +26,7 @@ To execute a single task with pnpm use the following syntax:
 pnpm --filter <package_name> <command>
 ```
 
-You can also run multiple projects using root package:
+You can also run multiple applications using root package:
 
 ```
 pnpm run <command>
@@ -38,18 +38,18 @@ Learn more [in the docs](https://gitlab.com/pillar-1/devmy-cli/-/wikis/Docs).
 
 | Command          | Description                                                                                                                                                   |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| build            | executes the development build of the selected project(s).                                                                                                    |
-| build:production | executes the production build of the selected project(s).                                                                                                     |
-| start            | executes the development start of the selected project(s). this command replaces all commands expected to start the application, such as "dev", "serve", etc. |
-| start:production | executes the production start of the selected project(s). this command replaces all commands expected to start the application, such as "dev", "serve", etc.  |
-| format           | performs formatting validation of the selected project(s).                                                                                                    |
-| format:fix       | applies formatting changes to the selected project(s).                                                                                                        |
-| lint             | performs lint validation of the selected project(s).                                                                                                          |
-| lint:fix         | applies lint changes to the selected project(s).                                                                                                              |
-| test             | executes and watches (and opening any visual interfaces if present) the tests of the selected project(s).                                                     |
-| test:headless    | executes the tests of the selected project(s).                                                                                                                |
-| e2e              | executes and watches (and opening any visual interfaces if present) the e2e of the selected project(s).                                                       |
-| e2e:headless     | executes the e2e of the selected project(s).                                                                                                                  |
+| build            | executes the development build of the selected application(s).                                                                                                    |
+| build:production | executes the production build of the selected application(s).                                                                                                     |
+| start            | executes the development start of the selected application(s). this command replaces all commands expected to start the application, such as "dev", "serve", etc. |
+| start:production | executes the production start of the selected application(s). this command replaces all commands expected to start the application, such as "dev", "serve", etc.  |
+| format           | performs formatting validation of the selected application(s).                                                                                                    |
+| format:fix       | applies formatting changes to the selected application(s).                                                                                                        |
+| lint             | performs lint validation of the selected application(s).                                                                                                          |
+| lint:fix         | applies lint changes to the selected application(s).                                                                                                              |
+| test             | executes and watches (and opening any visual interfaces if present) the tests of the selected application(s).                                                     |
+| test:headless    | executes the tests of the selected application(s).                                                                                                                |
+| e2e              | executes and watches (and opening any visual interfaces if present) the e2e of the selected application(s).                                                       |
+| e2e:headless     | executes the e2e of the selected application(s).                                                                                                                  |
 
 ## Connect with us!
 

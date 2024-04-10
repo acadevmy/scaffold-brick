@@ -34,7 +34,7 @@
     "nx": "18.0.8"
   },
   "workspaces": [
-    "projects/*",
+    "applications/*",
     "libraries/*"
   ],
   "engines": {
