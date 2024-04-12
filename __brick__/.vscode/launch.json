@@ -1,0 +1,101 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "build",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["build"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "build:production",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["build:production"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "start",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["start"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "start:production",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["start:production"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "format",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["format"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "format:fix",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["format:fix"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "lint",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["lint"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "lint:fix",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["lint:fix"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "test",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["test"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "test:headless",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["test:headless"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "e2e",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["e2e"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "e2e:headless",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "pnpm",
+      "args": ["e2e:headless"]
+    }
+  ]
+}
