@@ -7,9 +7,7 @@
   "namedInputs": {
     "dotenvVault": [
       { "env": "DOTENV_KEY" },
-      "{workspaceRoot}/.env.vault",
-      "{workspaceRoot}/.env.me",
-      "{workspaceRoot}/.env"
+      "{workspaceRoot}/.env.vault"
     ],
     "sharedPackageManagers": [
       "{projectRoot}/package.json",
