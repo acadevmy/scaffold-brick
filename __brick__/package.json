@@ -7,7 +7,7 @@
   "scripts": {
     "prepare": "husky",
     "preinstall": "pnpm dlx only-allow pnpm",
-    "postinstall": "dotenv-vault pull -y",
+    "postinstall": "if ! is-ci ; then dotenv-vault pull -y; fi",
     "configuration": "npx dotenv-vault open -y",
     "dev": "nx run-many -t dev --parallel=true",
     "start": "nx run-many -t start --parallel=true",
@@ -31,7 +31,8 @@
     "@commitlint/config-angular": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
     "@commitlint/format": "19.3.0",
-    "@jscutlery/semver": "^5.2.2"
+    "@jscutlery/semver": "5.2.2",
+    "is-ci": "3.0.1"
   },
   "workspaces": [
     "applications/*",
