@@ -55,31 +55,22 @@
     ]
   },
   "targetDefaults": {
-    "start": {
-      "dependsOn": [
-        "default"
-      ]
-    },
-    "start:production": {
+    "dev": {
       "dependsOn": [
         "default",
-        "build:production"
+        "^build"
+      ]
+    },
+    "start": {
+      "dependsOn": [
+        "default",
+        "build"
       ]
     },
     "build": {
       "dependsOn": [
         "default",
         "^build"
-      ],
-      "outputs": [
-        "{projectRoot}/dist"
-      ],
-      "cache": true
-    },
-    "build:production": {
-      "dependsOn": [
-        "default",
-        "^build:production"
       ],
       "outputs": [
         "{projectRoot}/dist"
@@ -145,7 +136,7 @@
         "push": true,
         "syncVersions": true,
         "trackDeps": true,
-        "skipCommitTypes": ["docs","ci"]
+        "skipCommitTypes": ["docs","ci", "style"]
       }
     }
   }
