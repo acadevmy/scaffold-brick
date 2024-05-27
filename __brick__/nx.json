@@ -78,28 +78,28 @@
     "test": {
       "dependsOn": [
         "default",
-        "build:production"
+        "build"
       ],
       "cache": true
     },
     "test:headless": {
       "dependsOn": [
         "default",
-        "build:production"
+        "build"
       ],
       "cache": true
     },
     "e2e": {
       "dependsOn": [
         "default",
-        "start:production"
+        "start"
       ],
       "cache": true
     },
     "e2e:headless": {
       "dependsOn": [
         "default",
-        "start:production"
+        "start"
       ],
       "cache": true
     },
@@ -126,16 +126,6 @@
         "default"
       ],
       "cache": true
-    },
-    "release": {
-      "executor": "@jscutlery/semver:version",
-      "dependsOn": ["^release"],
-      "options": {
-        "push": true,
-        "syncVersions": true,
-        "trackDeps": true,
-        "skipCommitTypes": ["docs","ci", "style"]
-      }
     }
   }
 }
