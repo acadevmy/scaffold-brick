@@ -103,18 +103,6 @@
       ],
       "cache": true
     },
-    "format": {
-      "dependsOn": [
-        "default"
-      ],
-      "cache": true
-    },
-    "format:fix": {
-      "dependsOn": [
-        "default"
-      ],
-      "cache": true
-    },
     "lint": {
       "dependsOn": [
         "default"

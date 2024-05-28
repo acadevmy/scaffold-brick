@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.1.2",
   "scripts": {
     "prepare": "husky",
     "preinstall": "pnpm dlx only-allow pnpm",
@@ -12,8 +12,6 @@
     "dev": "nx run-many -t dev --parallel=true",
     "start": "nx run-many -t start --parallel=true",
     "build": "nx run-many -t build --parallel",
-    "format": "nx run-many -t format --parallel=true",
-    "format:fix": "nx run-many -t format:fix --parallel=true",
     "lint": "nx run-many -t lint --parallel=true",
     "lint:fix": "nx run-many -t lint:fix --parallel=true",
     "test": "nx run-many -t test --parallel=true",
@@ -43,9 +41,7 @@
       "build",
       "test",
       "lint",
-      "lint:fix",
-      "format",
-      "format:fix"
+      "lint:fix"
     ],
     "supportedArchitectures": {
       "os": [
