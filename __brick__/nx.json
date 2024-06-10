@@ -36,6 +36,7 @@
       }
     ],
     "sharedGlobals": [
+      "{projectRoot}/**/*.*",
       "!{projectRoot}/dist",
       "!{projectRoot}/.editorconfig",
       "!{projectRoot}/.eslintrc.json",
