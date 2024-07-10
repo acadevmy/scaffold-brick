@@ -21,9 +21,9 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "nx": "19.0.4",
+    "nx": "19.4.2",
     "husky": "9.0.11",
-    "dotenv-vault": "^1.26.1",
+    "dotenv-vault": "^1.26.2",
     "commitlint": "19.3.0",
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-angular": "19.3.0",
@@ -33,10 +33,10 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/gitlab": "^13.1.0",
+    "@semantic-release/gitlab": "^13.2.0",
     "dotenv": "^16.4.5",
     "is-ci": "3.0.1",
-    "semantic-release": "^23.1.1"
+    "semantic-release": "^24.0.0"
   },
   "workspaces": [
     "applications/*",
