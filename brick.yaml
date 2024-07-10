@@ -4,7 +4,7 @@ repository: https://github.com/acadevmy/scaffold-brick
 version: 0.1.4
 
 environment:
-  mason: 0.1.0-dev.54
+  mason: 0.1.0-dev.57
 
 vars:
   workspaceName:
