@@ -11,7 +11,7 @@ Use Devmy cli to leverage their code generators.
 devmy generate angular
 
 # Run applications in development env
-pnpm run start
+pnpm run dev
 ```
 
 Run `devmy --help` to get a list of available commands.
@@ -32,11 +32,12 @@ You can also run multiple applications using root package:
 pnpm run <command>
 ```
 
-Devmy uses a standardized set of commands. make sure you implement them all correctly and don't invent new ones if already included in the standard ones.
+Devmy uses a standardized set of commands. make sure you implement them all correctly and don't invent new ones if
+already included in the standard ones.
 Learn more [in the docs](https://gitlab.com/pillar-1/devmy-cli/-/wikis/Docs).
 
 | Command       | Description                                                                                                                                                       |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dev           | executes the development start of the selected application(s). this command replaces all commands expected to start the application, such as "dev", "serve", etc. |
 | start         | executes the production start of the selected application(s). this command replaces all commands expected to start the application, such as "dev", "serve", etc.  |
 | build         | executes the production build of the selected application(s).                                                                                                     |
