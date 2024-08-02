@@ -14,7 +14,6 @@ const releaseConfig = {
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
     "@semantic-release/npm",
-    ["@semantic-release/gitlab", { assets: ["CHANGELOG.md"] }],
     [
       "@semantic-release/exec",
       {
