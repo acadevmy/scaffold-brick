@@ -15,6 +15,11 @@ const releaseConfig = {
       channel: "next",
       prerelease: true,
     },
+    { 
+      name: "next-major",
+      channel: "next-major",
+      prerelease: true,
+    },
      '+([0-9])?(.{+([0-9]),x}).x',
   ],
   plugins: [
