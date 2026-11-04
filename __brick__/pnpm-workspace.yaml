@@ -33,8 +33,3 @@ allowBuilds:
   unrs-resolver: true
   # Telemetry only: denied.
   '@scarf/scarf': false
-
-peerDependencyRules:
-  allowedVersions:
-    # Next.js application (Storybook + Vite) runs on TypeScript 6.
-    tsconfck>typescript: '6'
