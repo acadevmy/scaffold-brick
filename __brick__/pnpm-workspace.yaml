@@ -2,8 +2,6 @@ packages:
   - 'applications/*'
   - 'libraries/*'
 
-# pnpm 11+ no longer reads the "pnpm" field of package.json nor the project
-# .npmrc settings: workspace settings live here.
 autoInstallPeers: true
 
 requiredScripts:
@@ -21,10 +19,8 @@ supportedArchitectures:
     - x64
     - arm64
 
-# Dependencies allowed to run install scripts. pnpm fails the install
-# (ERR_PNPM_IGNORED_BUILDS) on any build it was not told about, and the devmy
-# CLI installs without a terminal, so nothing can be approved interactively.
-# Add here what new applications need (`pnpm approve-builds`).
+# Dependencies allowed to run install scripts: add what new applications
+# need (`pnpm approve-builds`).
 allowBuilds:
   '@parcel/watcher': true
   '@sentry-internal/node-cpu-profiler': true
