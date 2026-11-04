@@ -1,3 +1,35 @@
 packages:
   - 'applications/*'
   - 'libraries/*'
+
+autoInstallPeers: true
+
+requiredScripts:
+  - build
+  - test
+  - lint
+  - lint:fix
+
+supportedArchitectures:
+  os:
+    - win32
+    - darwin
+    - current
+  cpu:
+    - x64
+    - arm64
+
+# Dependencies allowed to run install scripts: add what new applications
+# need (`pnpm approve-builds`).
+allowBuilds:
+  '@parcel/watcher': true
+  '@sentry-internal/node-cpu-profiler': true
+  '@sentry/cli': true
+  '@swc/core': true
+  esbuild: true
+  lmdb: true
+  msgpackr-extract: true
+  nx: true
+  unrs-resolver: true
+  # Telemetry only: denied.
+  '@scarf/scarf': false

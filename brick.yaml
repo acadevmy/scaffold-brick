@@ -1,7 +1,7 @@
 name: scaffold_brick
 description: Generates the scaffold of the devmy monorepo in which the project's applications and libraries will be inserted from the devmy cli.
 repository: https://github.com/acadevmy/scaffold-brick
-version: 0.1.4
+version: 0.2.0
 
 environment:
   mason: 0.1.0-dev.57

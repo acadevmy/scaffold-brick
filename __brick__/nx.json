@@ -1,9 +1,7 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "cacheDirectory": ".nx/cache",
-  "affected": {
-    "defaultBase": "main"
-  },
+  "defaultBase": "main",
   "namedInputs": {
     "dotenvVault": [
       { "env": "DOTENV_KEY" },

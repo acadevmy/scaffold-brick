@@ -20,7 +20,7 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "nx": "19.4.2",
+    "nx": "24.0.3",
     "husky": "9.0.11",
     "dotenv-vault": "^1.26.2",
     "commitlint": "19.3.0",
@@ -36,35 +36,20 @@
     "is-ci": "3.0.1",
     "semantic-release": "^24.0.0"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@12.16.1",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.22.2",
+      "onFail": "download"
+    }
+  },
   "engines": {
-    "node": ">=20.10.0",
-    "pnpm": ">=9.15.0"
+    "node": ">=22.12.0",
+    "pnpm": ">=12.0.0"
   },
   "workspaces": [
     "applications/*",
     "libraries/*"
-  ],
-  "pnpm": {
-    "executionEnv": {
-      "nodeVersion": "20.10.0"
-    },
-    "requiredScripts": [
-      "build",
-      "test",
-      "lint",
-      "lint:fix"
-    ],
-    "supportedArchitectures": {
-      "os": [
-        "win32",
-        "darwin",
-        "current"
-      ],
-      "cpu": [
-        "x64",
-        "arm64"
-      ]
-    }
-  }
+  ]
 }
