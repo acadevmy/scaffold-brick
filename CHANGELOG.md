@@ -5,8 +5,10 @@
 - Impostazioni di workspace spostate in `pnpm-workspace.yaml`: pnpm 11+ non
   legge più il campo `"pnpm"` del `package.json` né le impostazioni del
   `.npmrc` di progetto (`requiredScripts`, `supportedArchitectures`,
-  `autoInstallPeers`). `executionEnv.nodeVersion` rimosso: il vincolo su Node
-  resta in `engines`.
+  `autoInstallPeers`).
+- Node.js forzato a 24.22.2 con `devEngines.runtime` (`onFail: download`), al
+  posto di `executionEnv.nodeVersion`: pnpm scarica quella versione e la usa
+  per ogni script, qualunque sia il Node installato sulla macchina.
 - `allowBuilds` per le dipendenze con script di installazione delle
   applicazioni Next.js, Angular e NestJS: senza, pnpm 12 fallisce con
   `ERR_PNPM_IGNORED_BUILDS` e la devmy CLI installa senza terminale.

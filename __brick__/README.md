@@ -4,9 +4,21 @@
 
 ## Requirements
 
-- Node.js `>=22.12.0`
-- pnpm 12, through Corepack (`corepack enable`): the version is pinned in
-  `package.json` (`packageManager`).
+- Corepack enabled (`corepack enable`). Nothing else: the toolchain versions are
+  forced by the workspace.
+
+The workspace must build the same way on every machine, so whoever clones it
+runs exactly the versions it pins:
+
+- **pnpm** is forced by Corepack through `packageManager` in `package.json`.
+- **Node.js** is forced by pnpm through `devEngines.runtime` in `package.json`
+  (`onFail: "download"`): pnpm downloads that exact version and runs every
+  script with it, whatever Node.js is installed on the machine. This pin is the
+  one that matters; `engines` only states the supported range.
+
+Every application and library brick declares the same `devEngines.runtime` as
+the scaffold, so a project run on its own uses the same Node.js too. When the
+Node.js version changes, change it here and in every brick.
 
 Workspace settings live in `pnpm-workspace.yaml`. When an application adds a
 dependency with install scripts, approve it with `pnpm approve-builds` (or add
